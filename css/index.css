@@ -1,0 +1,493 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: default;
+}
+
+:root{
+    --fondo: rgb(24, 24, 24);
+    --dark-color: rgb(42, 54, 66);
+    --main-color:  #1ed760;
+    --gris: rgb(150,150,150);
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar{
+    background: transparent;
+    width: 10px;
+}
+
+
+::-webkit-scrollbar-thumb{
+    background: var(--gris);
+    border-radius: 5rem;
+    
+}
+
+body{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    background: var(--fondo);
+    overflow-x: hidden;
+    background-image: url("/images/bg.jpg");
+    background-size: cover;
+    background-position: 50% 50%;
+    background-attachment: fixed;
+}
+a{
+    cursor: pointer;
+}
+
+h2{
+    color: white;
+    font-size: 38px;
+    text-align: center;
+}
+
+span{
+    color: var(--main-color)
+}
+
+.btn{
+    text-decoration: none;
+    color: var(--dark-color);
+    background-color: var(--main-color);
+    padding: 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    border: 2px solid var(--fondo);
+    outline: 1px solid var(--main-color);
+    transition: .2s;
+}
+
+.btn:hover{
+    text-decoration: none;
+    color: var(--main-color);
+    background-color: var(--dark-color);
+    transition: .2s;
+}
+
+section{
+    padding: 20px;
+}
+
+/* ------------------------------ HEADER ---------------------------------*/
+
+.header{
+    background-color: transparent;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+
+.header span i{
+    color: var(--main-color);
+    font-size: 3.5rem;
+    padding: 0 2rem;
+}
+
+
+.header nav ul li{
+    display: inline-block;
+    text-align: center;
+}
+
+.header nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 0 20px;
+    transition: .3s;
+}
+
+.header nav ul li a:hover{
+    color: var(--main-color);
+    letter-spacing: .05rem;
+    transition: .3s;
+}
+
+/* ------------------------------ INICIO --------------------------------*/
+
+
+#inicio{
+    min-height: 100vh;
+    margin-top: -10vh;
+    box-shadow: inset 0 0 0 1000px rgba(30,30,30,.6), inset 0 -100px 200px #000, 0 5px 10px #111;;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    background-color: transparent;
+}
+
+#inicio h1{
+    font-family: 'Rock salt', cursive;
+    color: #fff;
+    font-size: 7rem;
+    cursor: default;
+}
+
+#inicio h1 i{
+    color: var(--main-color);
+    font-size: 8rem;
+}
+
+#inicio a{
+    position: absolute;
+    bottom: 3%;
+    font-size: 3rem;
+    color: #fff;
+    text-shadow: 0px 0px 10px #fff;
+    text-decoration: none;
+    transition: .2s;
+}
+
+#inicio a:hover{
+    transform: translateY(5px);
+    text-shadow: 0px 0px 20px #fff;
+    transition: .2s;
+}
+
+/* ------------------------------ Prox lanz DISCO --------------------------------*/
+
+#prox-lanz{
+    min-height: 60vh;
+    background-color: var(--fondo);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0 14rem;
+}
+
+#prox-lanz .descripcion{
+    flex: 1 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 35vh;
+}
+
+#prox-lanz .descripcion div h2{
+    font-size: 4rem;
+    padding-bottom: 1rem;
+    text-align: left;
+}
+#prox-lanz .descripcion div p{
+    color: var(--gris);
+    font-size: 1.2rem;
+    width: 70%;
+}
+
+#prox-lanz .descripcion div h3{
+    color: #555;
+    padding-bottom: 2rem;
+}
+
+#prox-lanz .descripcion .row-btns{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+#prox-lanz .descripcion .row-btns .btn{
+    text-align: left;
+    font-size: 1rem;
+}
+
+#prox-lanz .descripcion .row-btns .btn-2{
+    color:var(--main-color);
+    text-decoration: none;
+    font-size: 1.05rem;
+    transition: .2s;
+    
+}
+
+#prox-lanz .descripcion .row-btns .btn-2:hover{
+    letter-spacing: .05rem;
+    transition: .2s;
+}
+
+
+#prox-lanz .descripcion .row-btns .btn-2 i{
+    padding: 0 0 0 .5rem;
+}
+
+
+
+#prox-lanz .disco{
+    height: 40vh;
+    flex: .7 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("/images/disc6.jpg");
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: inset 0 0 0 300px rgba(30,30,30,.6),  0 5px 10px #111;
+    border-radius: 1rem;
+    transition: .3s;
+}
+
+#prox-lanz .disco:hover {
+    box-shadow: inset 0 0 0 300px rgba(30, 30, 30, 0.767), 0 0 5px var(--main-color),  10px 20px 10px #111;
+    transition: .3s;
+}
+
+#prox-lanz .disco:hover >  h3{
+    color:var(--main-color);
+
+}
+
+#prox-lanz .disco h3{
+    font-size: 3rem;
+    color: #fff;
+    font-family: 'rock salt' , cursive;
+}
+
+
+
+
+/* ------------------------------ PRESENTACIÓN --------------------------------*/
+
+#presentacion{
+    min-height: 60vh;
+    background-color: var(--fondo);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10rem;
+}
+
+#presentacion  .pregunta{
+    height: 40vh;
+    flex: .8 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("/images/foto-6.jpg");
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: inset 0 0 0 300px rgba(30,30,30,.6),  0 5px 10px #111;
+    border-radius: 1rem;
+}
+
+#presentacion  .pregunta h2{
+    font-size: 3rem ;
+}
+
+#presentacion  .right-side{
+    flex: 1 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem 2rem;
+}
+
+#presentacion  .right-side p{
+    color: #ccc;
+    font-size: 1.45rem;
+    line-height: 2.4rem;
+    padding: 4rem;
+}
+
+#presentacion  .right-side a{
+    width: 25%;
+    text-align: center; 
+
+}
+
+
+/* ------------------------------ DISCOS --------------------------------*/
+
+
+#discos{
+    color: white;
+    background-color: var(--fondo);
+    padding: 4rem 0;
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column ;
+    
+
+}
+
+#discos h2{
+    padding: 0rem 0 4rem;
+}
+
+
+#discos main{
+    display: grid;
+    grid-template-columns: repeat( 3, minmax(250px,350px));
+    grid-template-rows: repeat(2,270px);
+    gap: 4rem;
+    padding:  0 0 4rem 0;
+    border-radius: 2rem;
+    width: auto;
+}
+
+#discos main .caja-disco{
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-end;
+    padding: 1.8rem 2rem;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px #000, inset 0 -80px 80px rgb(0, 0, 0);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    transition: .3s;
+}
+
+#discos main .caja-disco:hover {
+    box-shadow: 0 10px 20px #000, inset 0 -200px 200px rgb(0, 0 , 0 );
+    transition: .3s;
+}
+
+#discos main .caja-disco .row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#discos main .caja-disco .row h3{
+    font-size: 1.8rem;
+}
+
+#discos main .caja-disco:hover > .row a {
+    transform: scale(1.1);
+    transition: .2s ease-out;
+}
+
+
+#discos main .caja-disco .row a{
+    font-size: 2.4rem;
+    text-decoration: none;
+    color: var(--main-color);
+    border-radius: 50%;
+    transition: .2s ease-out;
+}
+
+#discos main .one{
+    background-image: url('/images/disc1.jpg');
+}
+
+#discos main .two{
+    background-image: url('/images/disc2.png');
+}
+
+
+#discos main .three{
+    background-image: url('/images/disc4.jpg');
+}
+
+#discos main .four{
+    background-image: url('/images/disc3.jpg');
+}
+
+#discos main .five{
+    background-image: url('/images/disc3.png');
+}
+
+#discos main .six{
+    background-image: url('/images/disc5.jpg');
+}
+
+/* ------------------------------ INTRO-SHOWS --------------------------------*/
+
+#intro-shows {
+    background: transparent;
+    box-shadow: inset 0 0 0 1000px rgba(20, 28, 29, 0.938), 0 -50px 100px #000;
+    height: 25vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#intro-shows h2{
+    font-size: 2.3rem;
+    text-align: left;
+    flex: 1 1;
+    padding: 2rem 0 0;
+}
+#intro-shows  .invite{
+    flex: 1 1;
+    display: flex;
+    flex-direction: row;
+    width: 30%;
+    justify-content: center;
+    align-items: center;
+}
+#intro-shows  .invite p{
+    font-size: 1.7rem;
+    color: #aaa;
+    flex: 1 1;
+}
+
+#intro-shows .invite  .btn{
+    text-align: center;
+    flex: .4 1;
+}
+
+/* ------------------------------ FOOTER --------------------------------*/
+
+footer{
+    height: 150px;
+    background-color: rgb(12, 12, 12);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+footer h3{
+    font-size: 2.2rem;
+    color: var(--gris);
+    text-align: center;
+    flex: 1 1;
+}
+footer ul{
+    text-align: center;
+    display: flex;
+    gap: 1rem;
+    flex: .5 1;
+}
+
+footer ul li a{
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 1rem;
+    border-radius: 50%;
+    color: var(--dark-color);
+    border: 1px solid var(--dark-color);
+    transition: .3s;
+}
+
+footer ul li a:hover{
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+    transition: .3s;
+}
+
+
+
+

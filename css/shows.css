@@ -1,0 +1,336 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: default;
+}
+
+:root{
+    --fondo: rgb(24, 24, 24);
+    --dark-color: rgb(42, 54, 66);
+    --main-color:  #1ed760;
+    --gris: rgb(150,150,150);
+}
+html{
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar{
+    background: transparent;
+    width: 10px;
+}
+
+
+::-webkit-scrollbar-thumb{
+    background: var(--gris);
+    border-radius: 5rem;
+    
+}
+
+body{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    background: var(--fondo);
+    background-image: url("/images/bg4.jpg");
+    background-size: 100% 100vh;
+    background-position: 50% 0%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+a{
+    cursor: pointer;
+}
+
+h2{
+    color: white;
+    font-size: 38px;
+    text-align: center;
+}
+
+span{
+    color: var(--main-color)
+}
+
+.btn{
+    text-decoration: none;
+    color: var(--dark-color);
+    background-color: var(--main-color);
+    padding: 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    border: 2px solid var(--fondo);
+    outline: 1px solid var(--main-color);
+}
+
+.btn:hover{
+    text-decoration: none;
+    color: var(--main-color);
+    background-color: var(--dark-color);
+    transition: .2s;
+}
+
+section{
+    padding: 20px;
+}
+
+/* ------------------------------ HEADER ---------------------------------*/
+
+.header{
+    background-color: transparent;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+
+.header span i{
+    color: var(--main-color);
+    font-size: 3.5rem;
+    padding: 0 2rem;
+}
+
+
+.header nav ul li{
+    display: inline-block;
+    text-align: center;
+}
+
+.header nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 0 20px;
+    transition: .3s;
+}
+
+.header nav ul li a:hover{
+    color: var(--main-color);
+    letter-spacing: .05rem;
+    transition: .3s;
+}
+
+/* ------------------------------ Inicio--------------------------------*/
+#inicio{
+    min-height: 100vh;
+    box-shadow: inset 0 0 0 1000px rgba(17, 30, 31, 0.432), 0 5px 10px #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -10vh;
+}
+
+#inicio a{
+    position: absolute;
+    bottom: 3%;
+    font-size: 3rem;
+    color: #fff;
+    text-shadow: 0px 0px 10px #fff;
+    text-decoration: none;
+    transition: .2s;
+}
+
+#inicio a:hover{
+    transform: translateY(5px);
+    text-shadow: 0px 0px 20px #fff;
+    transition: .2s;
+}
+#inicio h1{
+    color: #fff;
+    text-align: center;
+    font-size: 5rem;
+    padding-top: 5vh;
+    font-family: 'rock salt',cursive;
+    text-transform: capitalize;
+}
+
+/* ------------------------------ SHOWS --------------------------------*/
+
+#shows{
+    color: white;
+    background-color: var(--fondo);
+    padding: 0rem 0 2rem;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column ;
+    box-shadow: inset 0 0 100px 20px #000;
+}
+
+#shows h2{
+    color: white;
+    padding: 0rem 0 3rem;
+}
+
+#shows main{
+    display: grid;
+    grid-template-columns: repeat( 3, minmax(362px,410px));
+    gap: 4rem;
+    padding-top:  4rem 0;
+    border-radius: 2rem;
+    width: auto;
+}
+
+#shows main .caja-show{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px #000, inset 0 0 0 300px rgba(30, 30, 30, 0.685);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    transition: .3s;
+}
+
+#shows main .caja-show:hover{
+    box-shadow: 0 5px 20px #000, inset 0 0 0 300px rgba(30, 30, 30, 0.938);
+    transition: .3s;
+}
+
+#shows main .one{
+    background-image: url('/images/foto-2.jpg');
+    
+}
+#shows main .two{
+    background-image: url('/images/foto-3.jpg');
+    
+}
+#shows main .three{
+    background-image: url('/images/foto-5.jpg');
+    
+}
+
+#shows main .four{
+    background-image: url('/images/foto-7.jpg');
+    
+}
+
+#shows main .four .btn ,#shows main .five .btn{
+    background-color: var(--fondo);
+}
+
+#shows main .four .btn:hover ,#shows main .five .btn:hover{
+    color: var(--dark-color);
+}
+
+#shows main .five{
+    background-image: url('/images/foto-1.jpg');
+    
+}
+
+#shows main .caja-show h3{
+    font-size: 24px;
+    padding-bottom: 10px;
+
+}
+
+#shows main .caja-show p{
+    padding: 10px 0;
+    text-align: left;
+    font-size: 18px;
+}
+
+#shows main .caja-show p span{
+    color: rgb(126, 141, 156);
+}
+
+#shows main .caja-show .btn{
+    width: 60%;
+    margin: auto;
+    font-size: .9rem;
+}
+
+/* ------------------------------ intro galeria --------------------------------*/
+
+#intro-shows {
+    background: transparent;
+    box-shadow: inset 0 0 0 1000px rgba(20, 28, 29, 0.664);
+    height: 25vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#intro-shows h2{
+    font-size: 2.3rem;
+    text-align: left;
+    flex: 1 1;
+    padding: 2rem 0 0;
+}
+#intro-shows  .invite{
+    flex: 1 1;
+    display: flex;
+    flex-direction: row;
+    width: 30%;
+    justify-content: center;
+    align-items: center;
+}
+#intro-shows  .invite p{
+    font-size: 1.7rem;
+    color: #aaa;
+    flex: 1 1;
+}
+
+#intro-shows .invite  .btn{
+    text-align: center;
+    flex: .4 1;
+}
+
+
+
+/* ------------------------------ FOOTER --------------------------------*/
+
+footer{
+    height: 150px;
+    background-color: rgb(12, 12, 12);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 10px var(--gris);
+}
+
+footer h3{
+    font-size: 2.2rem;
+    color: var(--gris);
+    text-align: center;
+    flex: 1 1;
+}
+footer ul{
+    text-align: center;
+    display: flex;
+    gap: 1rem;
+    flex: .5 1;
+}
+
+footer ul li a{
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 1rem;
+    border-radius: 50%;
+    color: var(--dark-color);
+    border: 1px solid var(--dark-color);
+    transition: .3s;
+}
+
+footer ul li a:hover{
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+    transition: .3s;
+}
+
+
+/*------------------ MediaQueries ------------------*/
+
+@media(max-width: 1600px) {
+    #shows main{
+        grid-template-columns: repeat(2, minmax(362px, 410px));
+    }
+}
+
+
