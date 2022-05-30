@@ -31,7 +31,7 @@ body{
     font-family:Georgia, 'Times New Roman', Times, serif;
     background: var(--fondo);
     background-image: url("/images/bg4.jpg");
-    background-size: 100% 100vh;
+    background-size: cover;
     background-position: 50% 0%;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -106,6 +106,64 @@ section{
     transition: .3s;
 }
 
+
+.header .menu-btn{  
+    flex: 1 1;
+    display: none;
+    z-index: 250;
+}
+
+.header .menu-btn .fa-times{
+    color: var(--fondo);
+    z-index: 250;
+    font-size: 2.5rem;
+}
+
+.header .menu-btn i{  
+    color: #fff;
+    font-size: 2.5rem;
+}
+
+.header .mobile-nav{
+    right: -100%;
+    height: 100vh;
+    background-color: #fff;
+    position: fixed;
+    width: 50%;
+    top: 0%;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    transition: .5s ease-out;
+}
+
+.header .mobile-nav ul{
+    display: flex;
+    gap: 1.8rem;
+    flex-direction: column;
+    z-index: 300;
+    text-decoration: none;
+    list-style-type: none;
+    font-size: 2rem;
+    text-align: center;
+    padding-top: 12vh;
+}
+
+.header .mobile-nav ul li a{
+    color: var(--fondo);
+    text-decoration: none;
+    font-size: 2rem;
+
+}
+
+.header .active{  
+    right: 0%;
+    transition: .5s ease-out;
+}
+
+
 /* ------------------------------ RESERVA --------------------------------*/
 
 #reserva{
@@ -135,7 +193,16 @@ section{
     background:  linear-gradient(to bottom right, var(--dark-color),var(--fondo));
     border-radius: 1rem;
     flex: 0.38 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
     box-shadow: 0 5px 10px #111;
+}
+
+#reserva form div{
+    flex: 1  1;
+    width: 100%;
 }
 
 
@@ -243,4 +310,171 @@ footer ul li a:hover{
     transition: .3s;
 }
 
+
+
+/*-------------------- MEDIA QUERIES -----------------------*/
+
+@media (max-width: 1400px){
+    html{
+        font-size: 75%;
+    }
+
+    #intro-shows h2{
+        text-align: center;
+    }
+    #intro-shows  .invite{
+        width: 50%;
+    }
+
+        
+    #reserva h1{
+        flex: .5 1;
+        font-size: 5rem;
+        padding: 0 2rem;
+        line-height: 8rem
+    }
+
+
+    #reserva form{
+        flex: 0.5 1;
+    }
+
+    #reserva form label{
+        font-size: 1.4rem;
+    }
+
+
+    
+
+} 
+
+
+@media (max-width: 1100px){
+    html{
+        font-size: 65%;
+    }
+
+    #reserva{
+        flex-direction: column;
+        width: 100%;
+        padding-top: 10vh;
+    }
+
+    #reserva h1{
+        flex: .2 1;
+        font-size: 5rem;
+        padding: 0 2rem;
+        line-height: 8rem
+    }
+
+
+    #reserva form{
+        flex: .5 1;
+        width: 60%;
+    }
+
+    #reserva form label{
+        font-size: 1.4rem;
+    }
+
+    
+    #reserva form input{
+        width: 80%;
+    }
+
+
+
+    #reserva form .acept{
+        font-size: 1.4rem;
+    }
+
+    #reserva form .terms-link{
+        font-size: 1.4rem;
+    }
+
+    #reserva form input.btn{
+        width: 35%;
+    }
+
+
+} 
+
+
+@media (max-width: 870px){
+
+    #reserva h1{
+        font-size: 4rem;
+    }
+    #reserva form{
+        width: 70%;
+    }
+} 
+
+
+
+
+@media (max-width: 750px){
+    html{
+        font-size: 60%;
+    }
+    .header .nav{
+        display: none;
+    }
+
+    .header{
+        justify-content: space-between;
+        padding: 0 4rem 0 2rem;
+
+    }
+
+    .header .menu-btn{
+        display: inline-block;
+        text-align: right;       
+    }
+
+    #reserva h1{
+        font-size: 3rem;
+    }
+    #reserva form{
+        width: 80%;
+    }
+
+    #reserva form input{
+        width: 85%;
+    }
+  
+
+
+    footer{
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        gap: 0rem;
+    }
+
+    footer h3{
+        flex: .5  1;
+        padding: 2rem;
+    }
+    footer ul{
+        flex: 1  1;
+    }
+
+} 
+
+
+
+@media (max-width: 554px){
+    #reserva h1{
+        font-size: 2.5rem;
+        flex: .2 1;
+    }
+    #reserva form{
+        width: 100%;
+    }
+
+    #reserva form input{
+        width: 85%;
+    }
+} 
 

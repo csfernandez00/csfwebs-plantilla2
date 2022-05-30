@@ -32,7 +32,7 @@ body{
     font-family:Georgia, 'Times New Roman', Times, serif;
     background: var(--fondo);
     background-image: url("/images/bg2.jpg");
-    background-size: 100% 100vh;
+    background-size: cover;
     background-position: 50% 0%;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -110,6 +110,62 @@ section{
     color: var(--main-color);
     letter-spacing: .05rem;
     transition: .3s;
+}
+
+.header .menu-btn{  
+    flex: 1 1;
+    display: none;
+    z-index: 250;
+}
+
+.header .menu-btn .fa-times{
+    color: var(--fondo);
+    z-index: 250;
+    font-size: 2.5rem;
+}
+
+.header .menu-btn i{  
+    color: #fff;
+    font-size: 2.5rem;
+}
+
+.header .mobile-nav{
+    right: -100%;
+    height: 100vh;
+    background-color: #fff;
+    position: fixed;
+    width: 50%;
+    top: 0%;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    transition: .5s ease-out;
+}
+
+.header .mobile-nav ul{
+    display: flex;
+    gap: 1.8rem;
+    flex-direction: column;
+    z-index: 300;
+    text-decoration: none;
+    list-style-type: none;
+    font-size: 2rem;
+    text-align: center;
+    padding-top: 12vh;
+}
+
+.header .mobile-nav ul li a{
+    color: var(--fondo);
+    text-decoration: none;
+    font-size: 2rem;
+
+}
+
+.header .active{  
+    right: 0%;
+    transition: .5s ease-out;
 }
 
 /* ------------------------------ Inicio--------------------------------*/
@@ -298,6 +354,169 @@ footer ul li a:hover{
     border: 1px solid var(--main-color);
     transition: .3s;
 }
+
+
+
+
+/*-------------------- MEDIA QUERIES -----------------------*/
+
+@media (max-width: 1400px){
+    html{
+        font-size: 75%;
+    }
+
+    #galeria .container-galeria{
+        width: 90%;
+    }
+
+
+    #intro-shows h2{
+        text-align: center;
+    }
+    #intro-shows  .invite{
+        width: 50%;
+    }
+
+} 
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 870px){
+    html{
+        font-size: 65%;
+    }
+    #galeria .container-galeria{
+        width: 100%;
+    }
+
+    
+    #inicio h1{
+        text-align: center;
+        font-size: 5rem;
+    }
+
+} 
+
+
+
+
+@media (max-width: 750px){
+    html{
+        font-size: 60%;
+    }
+    .header .nav{
+        display: none;
+    }
+
+    .header{
+        justify-content: space-between;
+        padding: 0 4rem 0 2rem;
+
+    }
+
+    .header .menu-btn{
+        display: inline-block;
+        text-align: right;       
+    }
+
+    #inicio h1{
+        font-size: 6rem;
+        line-height: 10rem;
+    }
+
+
+    #galeria .container-galeria{
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: minmax(100px, 200px);
+    }
+
+    #galeria .container-galeria .one{
+        grid-column: 1;
+        grid-row: 1;
+    }
+    
+    #galeria .container-galeria .two{
+        grid-column: 2;
+        grid-row:   1/3;
+    }
+    
+    #galeria .container-galeria .three{
+        grid-column: 1;
+        grid-row: 2 ;
+    }
+    
+    #galeria .container-galeria .eight{
+        grid-column: 1/3;
+        grid-row: 3;
+    }
+    
+    #galeria .container-galeria .five{
+        grid-column: 1;
+        grid-row: 4 / 6;
+    }
+    
+    #galeria .container-galeria .six{
+        grid-column: 2;
+        grid-row: 4;
+    }
+    
+    #galeria .container-galeria .seven{
+        grid-column: 2;
+        grid-row: 5;
+    }
+    
+    #galeria .container-galeria .four{
+        grid-column: 1/3;
+        grid-row: 6;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    #intro-shows  .invite{
+        width: 70%;
+    }
+
+    #intro-shows  .invite a{
+        font-size: 1.3rem;
+    }
+
+    footer{
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        gap: 0rem;
+    }
+
+    footer h3{
+        flex: .5  1;
+        padding: 2rem;
+    }
+    footer ul{
+        flex: 1  1;
+    }
+
+} 
+
 
 
 

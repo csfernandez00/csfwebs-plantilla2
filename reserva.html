@@ -17,7 +17,7 @@
         <span><i class="fa-solid fa-angles-up"></i></span>
 
         <!--Navegación-->
-        <nav>
+        <nav class="nav">
             <ul>
                 <li>
                     <a href="index.html#inicio">Inicio</a>
@@ -30,6 +30,30 @@
                 </li>
                 <li>
                     <a href="galeria.html">Galería</a>
+                </li>
+                <li>
+                    <a href="reserva.html">Reserva</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="menu-btn">
+            <i id="btn-menu" class="fas fa-bars"></i>
+        </div>
+
+        <nav class="mobile-nav">
+            <ul>
+                <li>
+                    <a href="index.html#inicio" class="mobile-nav-a1">Inicio</a>
+                </li>
+                <li>
+                    <a href="index.html#presentacion" class="mobile-nav-a2">Quienes Somos?</a>
+                </li>
+                <li>
+                    <a href="shows.html">Shows</a>
+                </li>
+                <li>
+                    <a href="galeria.html" >Galería</a>
                 </li>
                 <li>
                     <a href="reserva.html">Reserva</a>
@@ -49,26 +73,26 @@
                 <option value="show-3">30/04 Vigo </option>
             </select><br><br>
             <!-- Entradas -->
-            <label for="entradas">Cuantas entradas quiere?</label><br>
-            <input type="number" name="entradas-usuario" id="entradas" min="1" max="4" placeholder="1 a 4" required>
-            <br><br>
+            <div> <label for="entradas">Cuantas entradas quiere?</label><br>
+                <input type="number" name="entradas-usuario" id="entradas" min="1" max="4" placeholder="1 a 4" required>
+                <br><br></div>
             <!-- Nombre -->
-            <label for="nombre">Nombre y apellido:</label><br>
-            <input type="text" name="nombre-usuario" id="nombre" placeholder="Escriba aquí..." required>
-            <br><br>
+            <div><label for="nombre">Nombre y apellido:</label><br>
+                <input type="text" name="nombre-usuario" id="nombre" placeholder="Escriba aquí..." required>
+                <br><br></div>
             <!-- Fecha nacimiento -->
-            <label for="fecha-nac">Fecha de nacimiento:</label><br>
-            <input type="date" name="fecha-nac-usuario" id="fecha-nac" min="1922-04-27" max="2004-04-27" required>
-            <br><br>
+            <div><label for="fecha-nac">Fecha de nacimiento:</label><br>
+                <input type="date" name="fecha-nac-usuario" id="fecha-nac" min="1922-04-27" max="2004-04-27" required>
+                <br><br></div>
             <!-- Email -->
-            <label for="email">Email:</label><br>
-            <input type="email" name="email-usuario" id="email" placeholder="Escriba aquí..." required>
-            <br><br>
+            <div><label for="email">Email:</label><br>
+                <input type="email" name="email-usuario" id="email" placeholder="Escriba aquí..." required>
+                <br><br></div>
             <!-- terminos y submit -->
-            <input type="checkbox" name="terms" id="acepta-terms" required>Acepto los <a class="terms-link" href="https://www.ticketek.com.ar/terminos-y-condiciones" rel="nofollow noreferrer noopener" target="_blank">términos y
+            <div><input type="checkbox" name="terms" id="acepta-terms" required><span class="acept">Acepto los</span> <a class="terms-link" href="https://www.ticketek.com.ar/terminos-y-condiciones" rel="nofollow noreferrer noopener" target="_blank">términos y
                 condiciones</a>
-            <br><br>
-            <input type="submit" class="btn" value="Reservar"> <input type="reset" class="btn" value="Borrar">
+            <br><br></div>
+            <div><input type="submit" class="btn" value="Reservar"> <input type="reset" class="btn" value="Borrar"></div>
         </form>
     </section>
     <footer>
@@ -87,6 +111,7 @@
             </li>
         </ul>
     </footer>
+    <script src="/js/codigo.js"></script>
 </body>
 
 </html>

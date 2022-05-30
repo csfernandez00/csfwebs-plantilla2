@@ -14,6 +14,7 @@
 
 html{
     scroll-behavior: smooth;
+    
 }
 
 ::-webkit-scrollbar{
@@ -71,7 +72,7 @@ span{
 }
 
 section{
-    padding: 20px;
+    padding: 1.5rem;
 }
 
 /* ------------------------------ HEADER ---------------------------------*/
@@ -93,24 +94,86 @@ section{
     padding: 0 2rem;
 }
 
-
-.header nav ul li{
-    display: inline-block;
-    text-align: center;
+.header .nav ul{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
 }
 
-.header nav ul li a{
+.header .nav ul li{
+    text-align: center;
+    padding: 0 1.5rem;
+}
+
+.header .nav ul li a{
     color: white;
     text-decoration: none;
     font-size: 1.2rem;
-    padding: 0 20px;
+    
     transition: .3s;
 }
 
-.header nav ul li a:hover{
+.header .nav ul li a:hover{
     color: var(--main-color);
     letter-spacing: .05rem;
     transition: .3s;
+}
+
+
+.header .menu-btn{  
+    flex: 1 1;
+    display: none;
+    z-index: 250;
+}
+
+.header .menu-btn .fa-times{
+    color: var(--fondo);
+    z-index: 250;
+    font-size: 2.5rem;
+}
+
+.header .menu-btn i{  
+    color: #fff;
+    font-size: 2.5rem;
+}
+
+.header .mobile-nav{
+    right: -100%;
+    height: 100vh;
+    background-color: #fff;
+    position: fixed;
+    width: 50%;
+    top: 0%;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    transition: .5s ease-out;
+}
+
+.header .mobile-nav ul{
+    display: flex;
+    gap: 1.8rem;
+    flex-direction: column;
+    z-index: 300;
+    text-decoration: none;
+    list-style-type: none;
+    font-size: 2rem;
+    text-align: center;
+    padding-top: 12vh;
+}
+
+.header .mobile-nav ul li a{
+    color: var(--fondo);
+    text-decoration: none;
+    font-size: 2rem;
+
+}
+
+.header .active{  
+    right: 0%;
+    transition: .5s ease-out;
 }
 
 /* ------------------------------ INICIO --------------------------------*/
@@ -124,7 +187,6 @@ section{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    
     background-color: transparent;
 }
 
@@ -158,6 +220,9 @@ section{
 
 /* ------------------------------ Prox lanz DISCO --------------------------------*/
 
+.bg{
+    background-color:  var(--fondo);
+}
 #prox-lanz{
     min-height: 60vh;
     background-color: var(--fondo);
@@ -325,7 +390,6 @@ section{
     align-items: center;
     flex-direction:column ;
     
-
 }
 
 #discos h2{
@@ -416,7 +480,7 @@ section{
 
 #intro-shows {
     background: transparent;
-    box-shadow: inset 0 0 0 1000px rgba(20, 28, 29, 0.938), 0 -50px 100px #000;
+    box-shadow: inset 200px 200px 800px rgba(20, 28, 29, 0.938), 0 -50px 100px #000;
     height: 25vh;
     display: flex;
     flex-direction: column;
@@ -490,4 +554,301 @@ footer ul li a:hover{
 
 
 
+/*-------------------- MEDIA QUERIES -----------------------*/
 
+@media (max-width: 1400px){
+    html{
+        font-size: 75%;
+    }
+
+    #prox-lanz{
+        padding: 0 8rem;
+    }
+
+    #presentacion{
+        padding: 0 6rem;
+    }
+    #discos main{
+        grid-template-columns: repeat( 3, minmax(150px,250px));
+        grid-template-rows: repeat(2,200px);
+        width: auto;
+    }
+    #intro-shows h2{
+        text-align: center;
+    }
+    #intro-shows  .invite{
+        width: 50%;
+    }
+
+} 
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 870px){
+    html{
+        font-size: 65%;
+    }
+
+
+    
+    #inicio h1{
+        text-align: center;
+        font-size: 5rem;
+    }
+    #prox-lanz{
+        padding: 0 5rem;
+    }
+
+    #presentacion{
+        padding: 0 3rem;
+    }
+
+    #presentacion .right-side p{
+        padding: 2rem;
+    }
+
+    #discos main{
+        grid-template-columns: repeat( 2, minmax(250px,350px));
+        grid-template-rows: repeat(3,270px);
+        width: auto;
+    }
+
+    #discos main .caja-disco:hover {
+        box-shadow: 0 10px 20px #000, inset 0 -100px 100px rgb(0, 0 , 0 );
+        transition: .3s;
+    }
+
+
+} 
+
+
+
+
+@media (max-width: 750px){
+    html{
+        font-size: 60%;
+    }
+    .header .nav{
+        display: none;
+    }
+
+    .header{
+        justify-content: space-between;
+        padding: 0 4rem 0 2rem;
+
+    }
+
+    .header .menu-btn{
+        display: inline-block;
+        text-align: right;       
+    }
+
+    #inicio h1{
+        font-size: 6rem;
+        line-height: 10rem;
+    }
+
+
+    #prox-lanz{
+        flex-direction: column-reverse;
+        padding: 4rem 2rem;
+        min-height: 100vh;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #prox-lanz .descripcion{
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 4rem;
+        flex: .5 1;
+        width: 100%;
+    }
+
+    #prox-lanz .descripcion div{
+        text-align: center;
+        width: 100%;
+    }
+    
+    #prox-lanz .descripcion div h2{
+        text-align: center;
+    }
+
+    #prox-lanz .descripcion div p{
+        color: var(--gris);
+        font-size: 1.8rem;
+        margin: auto;
+    }
+    
+    
+    #prox-lanz .descripcion .row-btns{
+        display: flex;
+        flex-direction: row;
+        gap: 4rem;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #prox-lanz .descripcion .row-btns .btn{
+        font-size: 1.3rem;
+    }
+    
+    #prox-lanz .descripcion .row-btns .btn-2{
+        font-size: 1.3rem;
+    }
+    
+    
+    #prox-lanz .disco{
+        flex: 1 1;
+        width: 70%;
+        justify-content: center;
+        align-items: center;
+    }
+        
+
+    #presentacion{
+        min-height: 100vh;
+        padding: 4rem 2rem;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    #presentacion  .pregunta{
+        flex: 1 1;
+        width: 70%;
+    }
+    
+    #presentacion  .right-side{
+        flex: .3 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 0rem 2rem;
+    }
+    
+    #presentacion  .right-side p{
+        color: #ccc;
+        font-size: 1.8rem;
+        line-height: 2.7rem;
+        padding: 4rem;
+    }
+    
+    #presentacion  .right-side a{
+        width: 40%;
+        text-align: center; 
+        font-size: 1.3rem;
+    }
+
+
+    #discos main{
+        grid-template-columns: repeat( 1, minmax(250px,350px));
+        grid-template-rows: repeat(6, 270px);
+        width: auto;
+    }
+
+
+
+    #intro-shows  .invite{
+        width: 70%;
+    }
+
+    #intro-shows  .invite a{
+        font-size: 1.3rem;
+    }
+
+    footer{
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        gap: 0rem;
+    }
+
+    footer h3{
+        flex: .5  1;
+        padding: 2rem;
+    }
+    footer ul{
+        flex: 1  1;
+    }
+
+} 
+
+
+
+@media (max-width: 484px){
+
+    #prox-lanz .disco{
+        width: 90%;
+    }  
+
+    #prox-lanz .descripcion div h2{
+        font-size: 3rem;
+        padding-bottom: 2rem ;
+        width:100%;
+    }
+
+    #prox-lanz .descripcion div p{
+        width: 90%;
+    }
+
+    #presentacion{
+        padding: 4rem 2rem 0;
+    }
+    
+    #presentacion  .pregunta{
+        flex: 1 1;
+        width: 90%;
+    }
+    
+    #presentacion  .right-side{
+        padding: 0rem 0rem;
+    }
+    
+    #presentacion  .right-side p{
+        padding: 4rem 2rem;
+    }
+    
+    #presentacion  .right-side a{
+        width: 50%;
+    }
+
+
+    #discos main{
+        grid-template-columns: repeat( 1, minmax(250px,350px));
+        grid-template-rows: repeat(6, 270px);
+        width: auto;
+    }
+
+    #intro-shows  .invite{
+        width: 70%;
+    }
+
+    #intro-shows  .invite a{
+        font-size: 1.3rem;
+    }
+
+    footer{
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        gap: 0rem;
+    }
+
+    footer h3{
+        flex: .5  1;
+        padding: 2rem;
+    }
+    footer ul{
+        flex: 1  1;
+    }
+
+} 
