@@ -110,14 +110,9 @@ section{
 .header .menu-btn{  
     flex: 1 1;
     display: none;
-    z-index: 250;
 }
 
-.header .menu-btn .fa-times{
-    color: var(--fondo);
-    z-index: 250;
-    font-size: 2.5rem;
-}
+
 
 .header .menu-btn i{  
     color: #fff;
@@ -138,6 +133,14 @@ section{
     align-items: center;
     transition: .5s ease-out;
 }
+.header .mobile-nav .fa-times{
+    position: absolute;
+    left:  6%;
+    top: 2%;
+    font-size: 3rem;
+    z-index: 350;
+}
+
 
 .header .mobile-nav ul{
     display: flex;
